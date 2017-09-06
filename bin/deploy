@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Publish to NPM
+echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
+
+yarn
+yarn build && yarn deploy:prepare && npm publish npm-constructicon

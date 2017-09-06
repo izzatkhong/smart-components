@@ -1,0 +1,25 @@
+---
+steps:
+  - type: "waiter"
+
+  - name: ":nodejs: Test It"
+    command: "docker-compose run --rm build bin/test"
+
+  - name: ":nodejs: Lint It"
+    command: "docker-compose run --rm build bin/lint"
+
+  - wait
+
+  - name: ":shipit: Deploy Styleguide"
+    command: "docker-compose run --rm build bin/only-for-version-releases bin/deploy-docs"
+    branches: master
+
+  - name: ":shipit: Deploy NPM Package"
+    command: "docker-compose run --rm build bin/only-for-version-releases bin/deploy"
+    branches: master
+
+  - wait
+
+  - name: ":loudspeaker: Announce It"
+    command: "docker-compose run --rm build bin/only-for-version-releases bin/announce"
+    branches: master
