@@ -1,374 +1,384 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-    <link rel="shortcut icon" href="https://d8i1a0qhidbs8.cloudfront.net/image/favicon.png" type="image/vnd.microsoft.icon">
-		<title><%=htmlWebpackPlugin.options.title%></title>
-	</head>
-	<body>
 
-    <div class="ReactStyleguidist-StyleGuide__content ReactStyleguidist-common__font">
-      <h1 class="page_heading ReactStyleguidist-Section__heading">SmartSearch</h1>
-      <p class='large'>A collection of common SmartSearch React components used across many Geomatics projects.</p>
-      <p>The aim of this library is to provide a toolbelt of components, that will allow us to compose projects together more quickly and consistently.</p>
-      <a class='button' href="#">View Project on GitLab</a>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="https://d8i1a0qhidbs8.cloudfront.net/image/favicon.png" type="image/vnd.microsoft.icon">
+  <title>
+    <%=htmlWebpackPlugin.options.title%>
+  </title>
+</head>
 
-		<div id="app"></div>
+<body>
 
-    <a class='github-link' href="#">GitLab</a>
+  <div class="ReactStyleguidist-StyleGuide__content ReactStyleguidist-common__font">
+    <h1 class="page_heading ReactStyleguidist-Section__heading">AwesomeComponents</h1>
+    <p class='large'>A collection of common React components & containers used across many Geomatics projects.</p>
+    <p>The aim of this library is to provide a toolbelt of components, that will allow us to compose projects together more
+      quickly and consistently.</p>
+    <a class='button' href="#">View Project on GitLab</a>
+  </div>
 
-		<style type="text/css">
-      :root {
-        font-weight: 500;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
+  <div id="app"></div>
 
-      .ReactStyleguidist-common__font {
-        font-family: "proxima-nova", sans-serif;
-      }
+  <a class='github-link' href="#">GitLab</a>
 
+  <style type="text/css">
+    :root {
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .ReactStyleguidist-common__font {
+      font-family: "proxima-nova", sans-serif;
+    }
+
+    .ReactStyleguidist-StyleGuide__content {
+      max-width: 50rem;
+      padding: 2rem;
+    }
+
+    @media (max-width: 600px) {
       .ReactStyleguidist-StyleGuide__content {
-        max-width: 50rem;
-        padding: 2rem;
+        padding: 1.5rem;
       }
+    }
 
-      @media (max-width: 600px) {
-        .ReactStyleguidist-StyleGuide__content {
-          padding: 1.5rem;
-        }
-      }
+    .ReactStyleguidist-Section__root:not(:first-child) {
+      padding-top: 2rem;
+      border-top: 2px solid #ddd;
+    }
 
-      .ReactStyleguidist-Section__root:not(:first-child) {
-        padding-top: 2rem;
-        border-top: 2px solid #ddd;
-      }
+    .ReactStyleguidist-Section__heading {
+      position: relative;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+      font-size: 34px;
+    }
 
-      .ReactStyleguidist-Section__heading {
-        position: relative;
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-        margin-bottom: 3rem;
-        font-size: 34px;
-      }
+    .ReactStyleguidist-Section__heading:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 4rem;
+      height: 4px;
+      background-color: #55ba6f;
+      border-radius: 4px;
+    }
 
-      .ReactStyleguidist-Section__heading:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 4rem;
-        height: 4px;
-        background-color: #55ba6f;
-        border-radius: 4px;
-      }
+    .ReactStyleguidist-ReactComponent__primaryHeading {
+      padding-top: 1.25rem;
+      font-size: 28px;
+    }
 
-      .ReactStyleguidist-ReactComponent__primaryHeading {
-        padding-top: 1.25rem;
-        font-size: 28px;
-      }
+    .ReactStyleguidist-Markdown__h3,
+    .ReactStyleguidist-Markdown__h4 {
+      border-bottom: thin solid #e0e0e0;
+      padding-bottom: 0.25em;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
 
-      .ReactStyleguidist-Markdown__h3,
-      .ReactStyleguidist-Markdown__h4 {
-        border-bottom: thin solid #e0e0e0;
-        padding-bottom: 0.25em;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 2rem;
-      }
+    .ReactStyleguidist-Markdown__strong {
+      font-weight: 700;
+    }
 
-			.ReactStyleguidist-Markdown__strong {
-				font-weight: 700;
-			}
+    .ReactStyleguidist-Markdown__em {
+      font-style: italic;
+    }
 
-			.ReactStyleguidist-Markdown__em {
-				font-style: italic;
-			}
+    .ReactStyleguidist-ReactComponent__root {
+      margin-bottom: 100px;
+    }
 
-			.ReactStyleguidist-ReactComponent__root {
-				margin-bottom: 100px;
-			}
+    .ReactStyleguidist-ReactComponent__pathLine {
+      margin: 1rem 0;
+    }
 
-      .ReactStyleguidist-ReactComponent__pathLine {
-        margin: 1rem 0;
-      }
+    .ReactStyleguidist-ReactComponent__props {
+      padding: 1.5em;
+      background: whitesmoke;
+      max-width: calc(100vw - 3rem);
+      overflow: auto;
+    }
 
-      .ReactStyleguidist-ReactComponent__props {
-        padding: 1.5em;
-        background: whitesmoke;
-        max-width: calc(100vw - 3rem);
-        overflow: auto;
-      }
+    .ReactStyleguidist-Props__cell .ReactStyleguidist-Markdown__code {
+      white-space: nowrap;
+    }
 
-			.ReactStyleguidist-Props__cell .ReactStyleguidist-Markdown__code {
-				white-space: nowrap;
-			}
+    .ReactStyleguidist-TableOfContents__root input.ReactStyleguidist-TableOfContents__search {
+      background: white;
+      border-radius: 3px;
+    }
 
-      .ReactStyleguidist-TableOfContents__root input.ReactStyleguidist-TableOfContents__search {
-        background: white;
-        border-radius: 3px;
-      }
+    .ReactStyleguidist-TableOfContents__root input.ReactStyleguidist-TableOfContents__search:focus {
+      border-color: #43aa4c;
+    }
 
-      .ReactStyleguidist-TableOfContents__root input.ReactStyleguidist-TableOfContents__search:focus {
-        border-color: #43aa4c;
-      }
+    .ReactStyleguidist-colors__link,
+    .ReactStyleguidist-colors__link:link,
+    .ReactStyleguidist-colors__link:visited {
+      color: #43aa4c;
+    }
 
-      .ReactStyleguidist-colors__link, .ReactStyleguidist-colors__link:link, .ReactStyleguidist-colors__link:visited {
-        color: #43aa4c;
-      }
+    .ReactStyleguidist-colors__link:visited {
+      color: #55ba6f;
+    }
 
-      .ReactStyleguidist-colors__link:visited {
-        color: #55ba6f;
-      }
+    .ReactStyleguidist-colors__link:hover,
+    .ReactStyleguidist-colors__link:link:hover,
+    .ReactStyleguidist-colors__link:visited:hover {
+      color: #389040;
+    }
 
-      .ReactStyleguidist-colors__link:hover, .ReactStyleguidist-colors__link:link:hover, .ReactStyleguidist-colors__link:visited:hover {
-        color: #389040;
-      }
+    /* Sidebar */
 
-      /* Sidebar */
+    .ReactStyleguidist-StyleGuide__sidebar {
+      overflow: hidden;
+      border: 0;
+    }
 
+    .ReactStyleguidist-StyleGuide__sidebar>div {
+      overflow: auto;
+      max-height: calc(100vh - 115px);
+    }
+
+    @media (min-width: 600px) {
       .ReactStyleguidist-StyleGuide__sidebar {
-        overflow: hidden;
-        border: 0;
+        background: #43aa4c;
+        color: white;
+        width: 230px;
+        padding-bottom: 60px;
       }
 
-      .ReactStyleguidist-StyleGuide__sidebar > div {
-        overflow: auto;
-        max-height: calc(100vh - 115px);
+      body {
+        padding-left: 230px;
       }
 
-      @media (min-width: 600px) {
-        .ReactStyleguidist-StyleGuide__sidebar {
-          background: #43aa4c;
-          color: white;
-          width: 230px;
-          padding-bottom: 60px;
-        }
-
-        body {
-          padding-left: 230px;
-        }
-
-        .ReactStyleguidist-StyleGuide__root.ReactStyleguidist-StyleGuide__hasSidebar {
-          padding-left: 0;
-        }
-
-
-        .ReactStyleguidist-StyleGuide__sidebar .ReactStyleguidist-colors__link {
-          color: white;
-        }
-
-        .ReactStyleguidist-StyleGuide__sidebar .ReactStyleguidist-colors__link:hover {
-          color: whitesmoke;
-        }
-
-        .ReactStyleguidist-StyleGuide__heading {
-          background: #389040;
-          color: white;
-          border: 0;
-        }
-
-        .ReactStyleguidist-StyleGuide__sidebar:before {
-          content: '';
-          position: absolute;
-          bottom: 18px;
-          left: 20px;
-          right: 20px;
-          height: 30px;
-        }
+      .ReactStyleguidist-StyleGuide__root.ReactStyleguidist-StyleGuide__hasSidebar {
+        padding-left: 0;
       }
 
-      .ReactStyleguidist-StyleGuide__heading small {
-        color: rgba(0,0,0,.5);
-        margin-left: 0.5rem;
-        font-size: 80%;
+
+      .ReactStyleguidist-StyleGuide__sidebar .ReactStyleguidist-colors__link {
+        color: white;
+      }
+
+      .ReactStyleguidist-StyleGuide__sidebar .ReactStyleguidist-colors__link:hover {
+        color: whitesmoke;
       }
 
       .ReactStyleguidist-StyleGuide__heading {
-        font-weight: 900;
+        background: #389040;
+        color: white;
+        border: 0;
       }
 
-      @media (max-width: 600px) {
-        .ReactStyleguidist-StyleGuide__sidebar {
-          position: relative;
-          margin-top: 2rem;
-        }
+      .ReactStyleguidist-StyleGuide__sidebar:before {
+        content: '';
+        position: absolute;
+        bottom: 18px;
+        left: 20px;
+        right: 20px;
+        height: 30px;
       }
+    }
 
+    .ReactStyleguidist-StyleGuide__heading small {
+      color: rgba(0, 0, 0, .5);
+      margin-left: 0.5rem;
+      font-size: 80%;
+    }
 
-      /* Hacks */
+    .ReactStyleguidist-StyleGuide__heading {
+      font-weight: 900;
+    }
 
-      p {
-        display: block;
-        margin: 1rem 0;
-        font-size: 1.125rem;
-        line-height: 1.45em;
-      }
-
-      p.large {
-        font-size: 1.45rem;
-        line-height: 1.333em;
-      }
-
-      h1.page_heading {
-        font-size: 38px;
-      }
-
-      .button {
-        display: inline-block;
-        width: auto;
-        cursor: pointer;
-        text-decoration: none;
-        transform: translateZ(0px);
-        vertical-align: middle;
-        text-align: center;
-        padding-left: 1.125rem;
-        padding-right: 1.125rem;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        background-color: rgb(66, 170, 76);
-        color: rgb(255, 255, 255);
-        font-size: 1rem;
-        font-family: "Open Sans", sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
+    @media (max-width: 600px) {
+      .ReactStyleguidist-StyleGuide__sidebar {
         position: relative;
-        overflow: hidden;
-        border-width: 0px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.121569);
-        border-image: initial;
-        border-radius: 0.375rem;
-        margin-top: 1rem;
-      }
-
-      .button:hover {
-        opacity: 0.75;
-      }
-
-      a.github-link {
-        position: fixed;
-        width: 230px;
-        padding: 0 20px;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        height: 52px;
-        line-height: 52px;
-        opacity: 0;
-      }
-
-      @media (max-width: 600px) {
-        a.github-link {
-          position: absolute;
-          width: 100%;
-        }
-      }
-
-      @media (min-width: 600px) {
-        body:before {
-          content: "";
-          position: fixed;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          width: 230px;
-          background: #43aa4c;
-          background-image: linear-gradient(#389040 52px, #43aa4c 52px);
-        }
-      }
-
-      /* Icon section */
-
-      #Icon-container div:first-child + .ReactStyleguidist-Playground__root,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty + .ReactStyleguidist-Playground__root,
-      #Icon-container .ReactStyleguidist-Markdown__p + .ReactStyleguidist-Playground__root {
-        display: inline-block;
-        vertical-align: top;
-        min-width: 3.5rem;
-        font-size: 1.5rem;
-        text-align: center;
-        margin-right: 0.75rem;
-        margin-bottom: 0.75rem;
-      }
-
-      #Icon-container .ReactStyleguidist-Markdown__p {
         margin-top: 2rem;
       }
+    }
 
-      #Icon-container div:first-child + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__showCode,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__showCode,
-      #Icon-container .ReactStyleguidist-Markdown__p + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__showCode,
-      #Icon-container div:first-child + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__isolatedLink,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__isolatedLink,
-      #Icon-container .ReactStyleguidist-Markdown__p + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__isolatedLink,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty,
-      #Icon-container div hr {
-        display: none;
+
+    /* Hacks */
+
+    p {
+      display: block;
+      margin: 1rem 0;
+      font-size: 1.125rem;
+      line-height: 1.45em;
+    }
+
+    p.large {
+      font-size: 1.45rem;
+      line-height: 1.333em;
+    }
+
+    h1.page_heading {
+      font-size: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      width: auto;
+      cursor: pointer;
+      text-decoration: none;
+      transform: translateZ(0px);
+      vertical-align: middle;
+      text-align: center;
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      background-color: rgb(66, 170, 76);
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      font-family: "Open Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      border-width: 0px;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.121569);
+      border-image: initial;
+      border-radius: 0.375rem;
+      margin-top: 1rem;
+    }
+
+    .button:hover {
+      opacity: 0.75;
+    }
+
+    a.github-link {
+      position: fixed;
+      width: 230px;
+      padding: 0 20px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      height: 52px;
+      line-height: 52px;
+      opacity: 0;
+    }
+
+    @media (max-width: 600px) {
+      a.github-link {
+        position: absolute;
+        width: 100%;
       }
+    }
 
-      #Icon-container div:first-child + .ReactStyleguidist-Playground__root:hover,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty + .ReactStyleguidist-Playground__root:hover,
-      #Icon-container .ReactStyleguidist-Markdown__p + .ReactStyleguidist-Playground__root:hover {
-        z-index: 999;
-      }
-
-      #Icon-container div:first-child + .ReactStyleguidist-Playground__root:hover .ReactStyleguidist-Playground__showCode,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty + .ReactStyleguidist-Playground__root:hover .ReactStyleguidist-Playground__showCode,
-      #Icon-container .ReactStyleguidist-Markdown__p + .ReactStyleguidist-Playground__root:hover .ReactStyleguidist-Playground__showCode {
-        display: block;
-        z-index: 1000;
-        left: -1px;
-      }
-
-      #Icon-container div:first-child + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__hideCode,
-      #Icon-container .ReactStyleguidist-Playground__root + div:empty + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__hideCode,
-      #Icon-container .ReactStyleguidist-Markdown__p + .ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__hideCode {
-        background: transparent;
-        border: 0;
+    @media (min-width: 600px) {
+      body:before {
+        content: "";
+        position: fixed;
         top: 0;
-        bottom: auto;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 3em;
-        font-size: 12px;
-        right: 0.25em;
+        left: 0;
+        bottom: 0;
+        width: 230px;
+        background: #43aa4c;
+        background-image: linear-gradient(#389040 52px, #43aa4c 52px);
       }
-		</style>
+    }
 
-    <script src="https://use.typekit.net/lbp2sai.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    /* Icon section */
 
-    <script>
-      document.addEventListener('click', function(e) {
-        var el = e.target;
+    #Icon-container div:first-child+.ReactStyleguidist-Playground__root,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty+.ReactStyleguidist-Playground__root,
+    #Icon-container .ReactStyleguidist-Markdown__p+.ReactStyleguidist-Playground__root {
+      display: inline-block;
+      vertical-align: top;
+      min-width: 3.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-right: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
 
-        if (el.classList && el.classList.contains('ReactStyleguidist-ReactComponent__pathLine')) {
-          var r = document.createRange();
-          var sel=window.getSelection();
-          r.selectNodeContents(el);
-          sel.removeAllRanges();
-          sel.addRange(r);
-        }
+    #Icon-container .ReactStyleguidist-Markdown__p {
+      margin-top: 2rem;
+    }
 
-        if (el.tagName === "A" && el.getAttribute('href') === "/") {
-          e.preventDefault();
-          var location = window.location;
-          location.assign(location.href.replace(location.hash, ''));
-        }
-      });
+    #Icon-container div:first-child+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__showCode,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__showCode,
+    #Icon-container .ReactStyleguidist-Markdown__p+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__showCode,
+    #Icon-container div:first-child+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__isolatedLink,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__isolatedLink,
+    #Icon-container .ReactStyleguidist-Markdown__p+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__isolatedLink,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty,
+    #Icon-container div hr {
+      display: none;
+    }
 
-      setTimeout(function () {
-        var titleEl = document.querySelectorAll('.ReactStyleguidist-StyleGuide__heading')[0],
-            title = titleEl.innerHTML.split(' | '),
-            small = document.createElement('small');
+    #Icon-container div:first-child+.ReactStyleguidist-Playground__root:hover,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty+.ReactStyleguidist-Playground__root:hover,
+    #Icon-container .ReactStyleguidist-Markdown__p+.ReactStyleguidist-Playground__root:hover {
+      z-index: 999;
+    }
 
-        titleEl.innerHTML = title[0];
-        small.innerHTML = title[1];
-        titleEl.appendChild(small);
-      }, 1500);
-    </script>
-	</body>
+    #Icon-container div:first-child+.ReactStyleguidist-Playground__root:hover .ReactStyleguidist-Playground__showCode,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty+.ReactStyleguidist-Playground__root:hover .ReactStyleguidist-Playground__showCode,
+    #Icon-container .ReactStyleguidist-Markdown__p+.ReactStyleguidist-Playground__root:hover .ReactStyleguidist-Playground__showCode {
+      display: block;
+      z-index: 1000;
+      left: -1px;
+    }
+
+    #Icon-container div:first-child+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__hideCode,
+    #Icon-container .ReactStyleguidist-Playground__root+div:empty+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__hideCode,
+    #Icon-container .ReactStyleguidist-Markdown__p+.ReactStyleguidist-Playground__root .ReactStyleguidist-Playground__hideCode {
+      background: transparent;
+      border: 0;
+      top: 0;
+      bottom: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 3em;
+      font-size: 12px;
+      right: 0.25em;
+    }
+  </style>
+
+  <script src="https://use.typekit.net/lbp2sai.js"></script>
+  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+  <script>
+    document.addEventListener('click', function (e) {
+      var el = e.target;
+
+      if (el.classList && el.classList.contains('ReactStyleguidist-ReactComponent__pathLine')) {
+        var r = document.createRange();
+        var sel = window.getSelection();
+        r.selectNodeContents(el);
+        sel.removeAllRanges();
+        sel.addRange(r);
+      }
+
+      if (el.tagName === "A" && el.getAttribute('href') === "/") {
+        e.preventDefault();
+        var location = window.location;
+        location.assign(location.href.replace(location.hash, ''));
+      }
+    });
+
+    setTimeout(function () {
+      var titleEl = document.querySelectorAll('.ReactStyleguidist-StyleGuide__heading')[0],
+        title = titleEl.innerHTML.split(' | '),
+        small = document.createElement('small');
+
+      titleEl.innerHTML = title[0];
+      small.innerHTML = title[1];
+      titleEl.appendChild(small);
+    }, 1500);
+  </script>
+</body>
+
 </html>

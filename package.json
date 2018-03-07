@@ -1,7 +1,7 @@
 {
-  "name": "smartsearch",
+  "name": "smart-components",
   "version": "0.1.0",
-  "description": "Library of re-usable components for SmartSearch",
+  "description": "Library of re-usable components for GDS solutions",
   "main": "index.js",
   "scripts": {
     "start": "styleguidist server",
@@ -15,18 +15,8 @@
   "author": "Wan Mohd Hafiz <fizyboy@gmail.com>",
   "license": "MIT",
   "standard": {
-    "ignore": [
-      "source/**/**/__tests__/*.js",
-      "test",
-      "gulpfile.js"
-    ],
-    "globals": [
-      "it",
-      "describe",
-      "mount",
-      "expect",
-      "utils"
-    ]
+    "ignore": ["source/**/**/__tests__/*.js", "test", "gulpfile.js"],
+    "globals": ["it", "describe", "mount", "expect", "utils"]
   },
   "dependencies": {
     "cxsync": "^1.0.9",
