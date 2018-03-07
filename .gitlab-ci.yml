@@ -10,7 +10,7 @@ before_script:
 pages:
   stage: deploy
   script:
-    - npm run build:styleguidist
+    - npm run build:styleguide
     - rm -rf public
     - mv styleguide public
   artifacts:
